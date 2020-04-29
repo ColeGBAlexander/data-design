@@ -16,7 +16,7 @@
 
 <p>*Steam takes her to a store page within the site, displaying a long list of relevant results*</p>
 
-    <p>she'll need to click on the paricular result she's searching for. Her friend Tyler said it would be the one
+    <p>she'll need to click on the particular result she's searching for. Her friend Tyler said it would be the one
         on the very top of the page. She clicks on this result.
 
 <p>*Steam opens up the purchase page of that particular game, displaying trailers, user feedback & pricing</p>
@@ -30,6 +30,37 @@ and hits the "Confirm Purchase" selector. Vuala!
 
 <p>*Steam displays the message "Congratulations! This game is now in your steam library and you can install it anytime*
 </p>
-        <p>After successful use of this service, Lucy uses this site frequently and with ease.</p>
+        <p>After successful use of this service, Lucy uses this site frequently and with ease. Around 4 times per week.</p>
+<p><a href="./Persona.php">Persona</a> </p>
+
+CREATE TABLE `Order` (
+`Order #` <type>,
+    `Customer_ID` <type>,
+        `Customer_name` <type>,
+            `Download Key` <type>,
+                PRIMARY KEY (`Order #`),
+                KEY `Key` (`Customer_ID`, `Customer_name`, `Download Key`)
+                );
+
+                CREATE TABLE `Product` (
+                `Product_ID` <type>,
+                    `Quanity` <type>,
+                        `Product_Type` <type>,
+                            KEY `Key` (`Product_ID`, `Quanity`, `Product_Type`)
+                            );
+
+                            CREATE TABLE `Customer` (
+                            `Customer ID` <type>,
+                                `First Name` <type>,
+                                    `Last Name` <type>,
+                                        `Street` <type>,
+                                            `City` <type>,
+                                                `Zip` <type>,
+                                                    KEY `Key` (`Customer ID`, `First Name`, `Last Name`, `Street`, `City`, `Zip`)
+                                                    );
+
+
 </body>
 </html>
+
+
