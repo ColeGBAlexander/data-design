@@ -1,0 +1,1 @@
+<p3>User Story: As a new user, Lucy wants to download and play games with friends.</p3>
