@@ -4,9 +4,9 @@
 
 <h2>Description: Lucy wants to make use of the steam service & play UNO with her friends and family.</h2>
 
-<h3></h3>
+<h3>Name of user & their role: Lucy; new to the steam service but has a deep love for games.</h3>
 
-
+<h4>Interaction Flow:</h4>
 <ul>
    <li>Now that she's activated her account, installed the client and types 'UNO' into the search bar, she
         hits ENTER;
@@ -32,5 +32,5 @@
 
                 <li>After successful use of this service, Lucy uses this site frequently and with ease. (Around 4 times per week).</li>
 
-    <h6>Precondition: Lucy has to have created an account, and entered current & correct information into the system</h6>
-    <h7>Postcondition: The conditions are met and she recieves her game.</h7>
+    <h3>Precondition: Lucy has to have created an account, and entered current & correct information into the system</h3>
+    <h3>Postcondition: The conditions are met and she recieves her game.</h3>
