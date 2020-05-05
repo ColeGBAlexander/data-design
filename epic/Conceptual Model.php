@@ -11,30 +11,30 @@
 <body>
 <h3>ORDER:</h3>
 <ul>
-    <Li>Order # (Primary Key)</Li>
-    <li>CustomerId (forign key)</li>
-    <li>Order date time (key)</li>
+    <Li>orderId (Primary Key)</Li>
+    <li>orderCustomerId (forign key)</li>
+    <li>orderDateTime</li>
 </ul>
 <h3>CUSTOMER:</h3>
 <ul>
-    <li>CustomerId (Key)</li>
-    <li>Customer Name (key)</li>
-    <li>Last Name (key)</li>
-    <li>Street (key)</li>
-    <li>City (key)</li>
-    <li>Zip (key)</li>
+    <li>customerId (Primary Key)</li>
+    <li>customerName (key)</li>
+    <li>lastName (key)</li>
+    <li>customerStreet (key)</li>
+    <li>customerCity (key)</li>
+    <li>customerZip (key)</li>
 </ul>
 <h3>ORDER PRODUCT TABLE:</h3>
 <ul>
-    <li>Cost (Forign Key)</li>
-    <li>Quantity (Forign Key)</li>
-    <li>Date (Key)</li>
+    <li>cost (Forign Key)</li>
+    <li>quantity (Forign Key)</li>
+    <li>date (Key)</li>
 </ul>
 <h3>PRODUCT:</h3>
 <ul>
-    <li>ProductId (key)</li>
-    <li>Product Type (key</li>
-    <li>Price</li>
+    <li>productId (Primary key)</li>
+    <li>productType</li>
+    <li>price</li>
 </ul>
 
 </body>
