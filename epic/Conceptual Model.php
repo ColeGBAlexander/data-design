@@ -18,23 +18,23 @@
 <h3>CUSTOMER:</h3>
 <ul>
     <li>customerId (Primary Key)</li>
-    <li>customerName (key)</li>
-    <li>lastName (key)</li>
-    <li>customerStreet (key)</li>
-    <li>customerCity (key)</li>
-    <li>customerZip (key)</li>
+    <li>customerName</li>
+    <li>customerStreet</li>
+    <li>customerCity</li>
+    <li>customerZip</li>
 </ul>
 <h3>ORDER PRODUCT TABLE:</h3>
 <ul>
-    <li>cost (Forign Key)</li>
-    <li>quantity (Forign Key)</li>
-    <li>date (Key)</li>
+    <li>orderProductCustomerId (Forign Key</li>
+    <li>orderProductProductId (Forign Key)</li>
+    <li>orderProductQuantity</li>
+    <li>orderProductDate</li>
 </ul>
 <h3>PRODUCT:</h3>
 <ul>
     <li>productId (Primary key)</li>
     <li>productType</li>
-    <li>price</li>
+    <li>productPrice</li>
 </ul>
 
 </body>
