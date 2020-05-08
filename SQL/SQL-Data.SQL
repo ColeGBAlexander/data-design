@@ -1,8 +1,9 @@
-ALTER DATABASE your_database_name_CHANGE_ME CHARACTER SET utf8 COLLATE utf8_unicode_ci;
+ALTER DATABASE SteamData CHARACTER SET utf8 COLLATE utf8_unicode_ci;
 
-DROP TABLE IF EXISTS `like`;
-DROP TABLE IF EXISTS tweet;
-DROP TABLE IF EXISTS profile;
+DROP TABLE IF EXISTS orderProduct;
+DROP TABLE IF EXISTS order;
+DROP TABLE IF EXISTS product;
+DROP TABLE IF EXISTS customer;
 
 CREATE TABLE customer (
   customerId binary(16) not null,
@@ -13,17 +14,6 @@ CREATE TABLE customer (
   PRIMARY KEY (customerId)
 );
 
-CREATE TABLE order (
-  orderId binary(16) not null,
-  orderCustomerId binary(16) not null,
-  orderDateTime datetime(6) not null,
-  INDEX(orderCustomerId),
-  INDEX(orderProductId),
-  FOREIGN KEY(orderCustomerId) REFERENCES customer(customerId),
-  FOREIGN KEY(orderProductId) REFERENCES customer(productId),
-  PRIMARY KEY (orderId)
-);
-
 CREATE TABLE product (
   productId binary(16) not null,
   orderProductId binary(16) not null,
@@ -31,12 +21,26 @@ CREATE TABLE product (
   PRIMARY KEY (productId)
 );
 
+CREATE TABLE order (
+  orderId binary(16) not null,
+  orderCustomerId binary(16) not null,
+  orderProductId binary(16) not null,
+  orderDateTime datetime(6) not null,
+  INDEX(orderCustomerId),
+  INDEX(orderProductId),
+  FOREIGN KEY(orderCustomerId) REFERENCES customer(customerId),
+  FOREIGN KEY(orderProductId) REFERENCES product(productId),
+  PRIMARY KEY (orderId)
+);
+
 CREATE TABLE orderProduct (
   orderProductCustomerId binary(16) not null,
   orderProductProductId binary(16) not null,
   orderProductQuantity int unsigned not null,
   orderProductDate datetime(6) not null,
-  KEY FK (orderProductCustomerId, orderProductProductId)
+  INDEX (orderProductCustomerId),
+  INDEX (orderProductProductId),
+  PRIMARY KEY (orderProductCustomerId, orderProductProductId)
 );
 
 -- Check with George to see if the logic is correct
