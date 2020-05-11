@@ -43,5 +43,49 @@ CREATE TABLE orderProduct (
   PRIMARY KEY (orderProductCustomerId, orderProductProductId)
 );
 
--- Check with George to see if the logic is correct
+-- work with george & brent to fix the run function with the sql database (fix  database connection)
+
+INSERT INTO customer(customerId, customerName, customerStreet, customerCity, CustomerZip)
+VALUES (UNHEX("18968f052cfe446bba89b2af6fdc4a9f"), "Lucy Sterling", "217 Jeorge St.", "LA", "3901");
+
+INSERT INTO customer(customerId, customerName, customerStreet, customerCity, CustomerZip)
+VALUES (UNHEX("38968f052cfe446bba89b2af6fdc4a9f"), "Keith Nelly", "11 Bundy St.", "Albuquerque", "87103");
+
+INSERT INTO customer(customerId, customerName, customerStreet, customerCity, CustomerZip)
+VALUES (UNHEX("28968f052cfe446bba89b2af6fdc4a9f"), "Jason Brody", "217 Jeorge St.", "Wales", "8901");
+
+
+UPDATE customer SET customerName = "Natalie" WHERE customerId = UNHEX("18968f052cfe446bba89b2af6fdc4a9f");
+
+
+DELETE FROM customer WHERE customerId = unhex("38968f052cfe446bba89b2af6fdc4a9f")
+
+
+INSERT INTO order(orderId, orderCustomerId, orderProductId, orderDateTime)VALUES
+(UNHEX("42516cfb9fdf40ae9c722c5f09daa6c0"),
+UNHEX("38968f052cfe446bba89b2af6fdc4a9f" ,
+UNHEX(32516cfb9fdf40ae9c722c5f09daa6c0 ,
+      '2011-11-11 11:11:11.111111');
+
+
+SELECT customer where customerId = UNHEX("18968f052cfe446bba89b2af6fdc4a9f");
+
+
+SELECT
+order.orderId ,order.orderCustomerId, customer.customerName, order.orderProductId, Order.OrderDateTime FROM order INNER JOIN customer on
+order.orderCustomerId = customer.customerId WHERE orderCustomerId = unhex("18968f052cfe446bba89b2af6fdc4a9f");
+
+
+SELECT COUNT(*) FROM "like" WHERE tweetId =
+UNHEX("18968f052cfe446bba89b2af6fdc4a9f");
+
+
+
+
+
+
+
+
+
+
 
